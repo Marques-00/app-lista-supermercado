@@ -1,15 +1,15 @@
 import { View, Text, Button, StyleSheet } from 'react-native';
-
-export default function ProductItem({ item, onDelete, onEdit }) {
+//amanda
+export default function ProdutoItem({ item, onDelete, onEdit }) {
   return (
-    <View style={styles.card}>
+    <View style={styles.card}> 
       <Text style={styles.text}>
-        {item.nome} - {item.quantidade}
+        {item.nome} - {item.quantidade} 
       </Text>
 
       <View style={styles.buttons}>
-        <Button title="Editar" onPress={onEdit} color="#20B2AA" />
-        <Button title="Excluir" onPress={onDelete} color="black" />
+        <Button title="Editar" onPress={onEdit} color="#20B2AA" /> 
+        <Button title="Excluir" onPress={onDelete} color="black" /> 
       </View>
     </View>
   );

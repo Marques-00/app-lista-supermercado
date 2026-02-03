@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { View, Text, TextInput, Button, FlatList, StyleSheet } from 'react-native';
 
-import ProductItem from './components/ProductItem';
-import { salvarProduto, buscarProdutos, deletarProduto, atualizarProduto } from './storage/productStorage';
-import { buscarProdutosApi } from './services/api';
-
+import ProductItem from './componentes/ProdutoItem';
+import { salvarProduto, buscarProdutos, deletarProduto, atualizarProduto } from './storage/produtodStorage';
+import { buscarProdutosApi } from './servicos/api';
+//eduarda
 export default function App() {
   const [nome, setNome] = useState('');
   const [quantidade, setQuantidade] = useState('');
@@ -20,7 +20,7 @@ export default function App() {
     const lista = await buscarProdutos();
     setProdutos(lista);
   }
-
+//amanda
   async function salvar() {
     if (!nome || !quantidade) return;
 
@@ -48,7 +48,7 @@ export default function App() {
     await deletarProduto(index);
     carregarProdutos();
   }
-
+//eduarda
   return (
     <View style={styles.container}>
       <Text style={styles.title}>LISTA DE SUPERMERCADO</Text>
